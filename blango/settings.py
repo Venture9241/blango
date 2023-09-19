@@ -35,6 +35,8 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5" #add this
+CRISPY_TEMPLATE_PACK = "bootstrap5" #add this
 
 
 # Application definition
@@ -46,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog', #add this
+    'crispy_forms', #add this
+    'crispy_bootstrap5' #add this
 ]
 
 MIDDLEWARE = [

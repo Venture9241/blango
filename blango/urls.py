@@ -13,10 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
 import blog.views
-import debug_toolbar
 from django.conf import settings
 import blango_auth.views
 from django_registration.backends.activation.views import RegistrationView
@@ -28,6 +28,7 @@ urlpatterns = [
     path("post/<slug>/", blog.views.post_detail, name="blog-post-detail"),
     path("ip/", blog.views.get_ip), #192.168.11.179
     path("accounts/", include("django.contrib.auth.urls")),
+    path("accounts/", include("allauth.urls")),
     path("accounts/profile/", blango_auth.views.profile, name="profile"),
     path(
     "accounts/register/",

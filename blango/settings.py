@@ -61,7 +61,8 @@ class Dev(Configuration):
         'blog', #add this
         'crispy_forms', #add this
         'crispy_bootstrap5', #add this
-        'debug_toolbar'
+        'debug_toolbar',
+        'rest_framework'
     ]
 
     MIDDLEWARE = [
